@@ -1,5 +1,4 @@
 import 'package:decibel_sdk/decibel_sdk.dart';
-import 'package:dxa_flutter_sample_app/main.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {

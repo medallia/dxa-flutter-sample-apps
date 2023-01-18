@@ -1,7 +1,5 @@
 import 'package:decibel_sdk/decibel_sdk.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class PopupsScreen extends StatelessWidget {
   const PopupsScreen({super.key});
@@ -9,7 +7,7 @@ class PopupsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Popups screen')),
+      appBar: AppBar(title: const Text('Popups screen')),
       body: Center(
         child: Column(
           children: [
@@ -21,7 +19,7 @@ class PopupsScreen extends StatelessWidget {
                           screenName: "alert_dialog_popup",
                           child: AlertDialog(
                             title: const Text('Alert Dialog'),
-                            content: Text('Your content'),
+                            content: const Text('Your content'),
                             actions: [
                               TextButton(
                                 child: const Text('Close'),
@@ -34,11 +32,11 @@ class PopupsScreen extends StatelessWidget {
                         )),
                   );
                 },
-                child: Text('open dialog')),
-            Divider(
+                child: const Text('open dialog')),
+            const Divider(
               thickness: 2,
             ),
-            Text(
+            const Text(
                 'When this dialog is launched, an assertion error will be thrown due to it not being correctly implemented.'),
             ElevatedButton(
                 onPressed: () async {
@@ -48,7 +46,7 @@ class PopupsScreen extends StatelessWidget {
                           screenName: "alert_dialog_popup",
                           child: AlertDialog(
                             title: const Text('Alert Dialog'),
-                            content: Text('Your content'),
+                            content: const Text('Your content'),
                             actions: [
                               TextButton(
                                 child: const Text('Close'),
@@ -61,7 +59,7 @@ class PopupsScreen extends StatelessWidget {
                         )),
                   );
                 },
-                child: Text('open wrongly implemented dialog'))
+                child: const Text('open wrongly implemented dialog'))
           ],
         ),
       ),

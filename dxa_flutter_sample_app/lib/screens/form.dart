@@ -11,8 +11,8 @@ class _FormScreenState extends State<FormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(automaticallyImplyLeading: false, title: Text('FormScreen')),
+      appBar: AppBar(
+          automaticallyImplyLeading: false, title: const Text('FormScreen')),
     );
   }
 }

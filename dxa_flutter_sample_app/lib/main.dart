@@ -12,18 +12,19 @@ import 'package:go_router/go_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await DecibelSdk.initialize(10010, 250441);
+  //Initalize the sdk with your account and property.
+  await DecibelSdk.initialize(0, 0);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: 'welcome_screen',
+      //Put the observers provided by the SDK.
       navigatorObservers: [...DecibelSdk.routeObservers],
       routes: {
         ///You could wrap your WidgetScreen here, but to  make it easier to
@@ -51,11 +52,13 @@ class MyAppNewNavigation extends StatelessWidget {
 
   final _router = GoRouter(
     initialLocation: '/welcome_screen',
+    //Because we are not using the Material.router, we need to put the observers
+    //here or in the Navigator widget, whichever one your app uses.
     observers: [...DecibelSdk.routeObservers],
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => WelcomeScreen(),
+        builder: (context, state) => const WelcomeScreen(),
       ),
       GoRoute(
         path: '/home_screen',

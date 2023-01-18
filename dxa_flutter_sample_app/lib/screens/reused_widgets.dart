@@ -1,5 +1,4 @@
 import 'package:decibel_sdk/decibel_sdk.dart';
-import 'package:dxa_flutter_sample_app/main.dart';
 import 'package:flutter/material.dart';
 
 class ReusedScreen extends StatelessWidget {
@@ -26,7 +25,7 @@ class ReusedScreen extends StatelessWidget {
                     Navigator.of(context).pushNamed('/reused_screen');
                   },
                   child: const Text('Open this window outside a tabBar'))
-              : Text('You are now outside the tabBar'),
+              : const Text('You are now outside the tabBar'),
         ),
       ),
     );

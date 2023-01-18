@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
         automaticallyImplyLeading: false,
       ),
       body: Center(
@@ -17,20 +17,20 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/tabbar_screen');
                 },
-                child: Text("TabBar screen")),
+                child: const Text("TabBar screen")),
             ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/masking_screen');
                 },
-                child: Text("Masking screen")),
+                child: const Text("Masking screen")),
             ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/popups_screen');
                 },
-                child: Text("Popups screen"))
+                child: const Text("Popups screen"))
           ]
               .map((e) => Padding(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     child: e,
                   ))
               .toList(),

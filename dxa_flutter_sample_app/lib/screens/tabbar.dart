@@ -1,6 +1,4 @@
 import 'package:decibel_sdk/decibel_sdk.dart';
-import 'package:dxa_flutter_sample_app/screens/form.dart';
-import 'package:dxa_flutter_sample_app/screens/layouts.dart';
 import 'package:dxa_flutter_sample_app/screens/reused_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -50,14 +48,14 @@ class _TabBarScreenState extends State<TabBarScreen>
             leading: null,
             actions: <Widget>[
               IconButton(
-                  icon: Icon(Icons.logout),
+                  icon: const Icon(Icons.logout),
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
                         context, '/', ((route) => false));
                     //Implement logout functionality
                   }),
             ],
-            title: Text('Home Page'),
+            title: const Text('Home Page'),
             backgroundColor: Colors.lightBlueAccent,
           ),
           body: TabBarView(controller: tabController, children: const [
