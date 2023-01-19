@@ -34,8 +34,7 @@ dependencies:
   decibel_sdk:
     git:
       url: https://github.com/DecibelInsight/decibel-sdk-flutter-binding.git
-      #Change to 1.1.0 as soon as the release is done
-      ref: 1.0.9
+      ref: 1.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
