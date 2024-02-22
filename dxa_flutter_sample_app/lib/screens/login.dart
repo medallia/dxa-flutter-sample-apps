@@ -1,4 +1,3 @@
-import 'package:decibel_sdk/decibel_sdk.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -6,28 +5,25 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenWidget(
-      screenName: 'login_screen',
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Login"),
-        ),
-        body: Column(
-          children: [
-            const TextField(
-              decoration: InputDecoration(hintText: 'Enter your email'),
-            ),
-            const TextField(
-              decoration: InputDecoration(hintText: 'Enter your password'),
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/home_screen', ((route) => false));
-                },
-                child: const Text('Login'))
-          ],
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Login"),
+      ),
+      body: Column(
+        children: [
+          const TextField(
+            decoration: InputDecoration(hintText: 'Enter your email'),
+          ),
+          const TextField(
+            decoration: InputDecoration(hintText: 'Enter your password'),
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/home_screen', ((route) => false));
+              },
+              child: const Text('Login'))
+        ],
       ),
     );
   }

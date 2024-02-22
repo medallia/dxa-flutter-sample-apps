@@ -1,4 +1,3 @@
-import 'package:decibel_sdk/decibel_sdk.dart';
 import 'package:dxa_flutter_sample_app/screens/home.dart';
 import 'package:dxa_flutter_sample_app/screens/masking.dart';
 import 'package:dxa_flutter_sample_app/screens/popups.dart';
@@ -9,11 +8,16 @@ import 'package:dxa_flutter_sample_app/screens/reused_widgets.dart';
 import 'package:dxa_flutter_sample_app/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:medallia_dxa/medallia_dxa.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Initalize the sdk with your account and property.
-  await DecibelSdk.initialize(0, 0);
+  await MedalliaDxa.initialize(
+      dxaConfig: DxaConfig(
+    property: 250441,
+    account: 10010,
+  ));
   runApp(const MyApp());
 }
 
@@ -24,11 +28,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: 'welcome_screen',
-      //Put the observers provided by the SDK.
-      navigatorObservers: [...DecibelSdk.routeObservers],
+      //Put the observer provided by the SDK.
+      navigatorObservers: [MedalliaDxa.routeObserver],
       routes: {
-        ///You could wrap your WidgetScreen here, but to  make it easier to
-        ///refactor we recommend to always wrap the Scaffold widget directly
         '/': (context) => const WelcomeScreen(),
         '/registration_screen': (context) => const RegistrationScreen(),
         '/login_screen': (context) => const LoginScreen(),
@@ -54,7 +56,7 @@ class MyAppNewNavigation extends StatelessWidget {
     initialLocation: '/welcome_screen',
     //Because we are not using the Material.router, we need to put the observers
     //here or in the Navigator widget, whichever one your app uses.
-    observers: [...DecibelSdk.routeObservers],
+    observers: [MedalliaDxa.routeObserver],
     routes: [
       GoRoute(
         path: '/',
