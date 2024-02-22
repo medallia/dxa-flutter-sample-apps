@@ -31,11 +31,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  decibel_sdk:
+  medallia_dxa:
     git:
-      url: https://github.com/DecibelInsight/decibel-sdk-flutter-binding.git
-      ref: 1.1.0
-
+      url: https://github.com/medallia/dxa-flutter-sdk.git
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2

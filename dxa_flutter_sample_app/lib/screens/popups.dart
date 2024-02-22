@@ -1,4 +1,3 @@
-import 'package:decibel_sdk/decibel_sdk.dart';
 import 'package:flutter/material.dart';
 
 class PopupsScreen extends StatelessWidget {
@@ -15,20 +14,17 @@ class PopupsScreen extends StatelessWidget {
                 onPressed: () async {
                   await showDialog(
                     context: context,
-                    builder: ((context) => ScreenWidget.popup(
-                          screenName: "alert_dialog_popup",
-                          child: AlertDialog(
-                            title: const Text('Alert Dialog'),
-                            content: const Text('Your content'),
-                            actions: [
-                              TextButton(
-                                child: const Text('Close'),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          ),
+                    builder: ((context) => AlertDialog(
+                          title: const Text('Alert Dialog'),
+                          content: const Text('Your content'),
+                          actions: [
+                            TextButton(
+                              child: const Text('Close'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
                         )),
                   );
                 },
@@ -42,20 +38,17 @@ class PopupsScreen extends StatelessWidget {
                 onPressed: () async {
                   await showDialog(
                     context: context,
-                    builder: ((context) => ScreenWidget(
-                          screenName: "alert_dialog_popup",
-                          child: AlertDialog(
-                            title: const Text('Alert Dialog'),
-                            content: const Text('Your content'),
-                            actions: [
-                              TextButton(
-                                child: const Text('Close'),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          ),
+                    builder: ((context) => AlertDialog(
+                          title: const Text('Alert Dialog'),
+                          content: const Text('Your content'),
+                          actions: [
+                            TextButton(
+                              child: const Text('Close'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
                         )),
                   );
                 },

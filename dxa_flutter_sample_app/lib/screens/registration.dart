@@ -1,4 +1,3 @@
-import 'package:decibel_sdk/decibel_sdk.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -7,26 +6,23 @@ class RegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final PageController controller = PageController();
-    return ScreenWidget(
-      screenName: 'registration_screen',
-      child: Scaffold(
-          appBar: AppBar(
-            title: const Text('RegistrationScreen'),
-          ),
-          body: PageView(
-            controller: controller,
-            children: [
-              PageViewStep1(controller: controller),
-              PageViewStep2(controller: controller),
-            ]
-                .map((e) => Center(
-                        child: Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: e,
-                    )))
-                .toList(),
-          )),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('RegistrationScreen'),
+        ),
+        body: PageView(
+          controller: controller,
+          children: [
+            PageViewStep1(controller: controller),
+            PageViewStep2(controller: controller),
+          ]
+              .map((e) => Center(
+                      child: Padding(
+                    padding: const EdgeInsets.all(32),
+                    child: e,
+                  )))
+              .toList(),
+        ));
   }
 }
 
