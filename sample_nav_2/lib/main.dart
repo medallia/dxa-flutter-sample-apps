@@ -13,8 +13,8 @@ void main() async {
 
   await MedalliaDxa.initialize(
       dxaConfig: DxaConfig(
-    property: 250441,
-    account: 10010,
+    property: 0,
+    account: 0,
   ));
   runApp(NestedTabNavigationExampleApp());
 }
