@@ -15,8 +15,8 @@ void main() async {
   //Initalize the sdk with your account and property.
   await MedalliaDxa.initialize(
       dxaConfig: DxaConfig(
-    property: 250441,
-    account: 10010,
+    property: 0,
+    account: 0,
   ));
   runApp(const MyApp());
 }
