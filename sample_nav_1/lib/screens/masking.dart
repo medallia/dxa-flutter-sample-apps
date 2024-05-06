@@ -36,6 +36,9 @@ class MaskingScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const Divider(
+              thickness: 2,
+            ),
 
             const Divider(
               thickness: 2,
