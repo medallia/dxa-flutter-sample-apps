@@ -42,7 +42,7 @@ class _TabBarScreenGroupState extends State<TabBarScreenGroup>
                 icon: const Icon(Icons.logout),
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
-                      context, '/', ((route) => false));
+                      context, '/welcome_screen', ((route) => false));
                   //Implement logout functionality
                 }),
           ],

@@ -42,7 +42,7 @@ class _TabBarScreenIndividualState extends State<TabBarScreenIndividual>
                 icon: const Icon(Icons.logout),
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
-                      context, '/', ((route) => false));
+                      context, '/welcome_screen', ((route) => false));
                 }),
           ],
           title: const Text('Home Page'),
