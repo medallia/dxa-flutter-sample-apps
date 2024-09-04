@@ -45,10 +45,12 @@ android {
         applicationId "com.example.sample_nav_2"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion 23
+        minSdkVersion 25
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        missingDimensionStrategy("dxa-platform", "flutter")
+        missingDimensionStrategy("dxa-environment", "prod")
     }
 
     buildTypes {
