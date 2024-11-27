@@ -50,9 +50,6 @@ class _TabBarScreenGroupState extends State<TabBarScreenGroup>
           backgroundColor: Colors.lightBlueAccent,
         ),
         body: TabBarView(controller: tabController, children: const [
-          ///Don't put ScreenWidgets in these screens unless they are also
-          ///going to be used as independent screens outside of this tabBar,
-          ///like ReusedScreen()
           TabWidget(
             tabNumber: 1,
           ),
