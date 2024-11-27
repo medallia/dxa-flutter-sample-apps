@@ -5,10 +5,6 @@ class ReusedScreen extends StatelessWidget {
   final bool inTabBar;
   @override
   Widget build(BuildContext context) {
-    ///We also put a ScreenWidget here because this is going to be an
-    ///independent screen. When this is inside a TabBar, the screenName will
-    ///be ignored and the name provided to the ScreenWidget in the TabBar will
-    ///be the one used.
     return Scaffold(
       appBar: inTabBar
           ? null

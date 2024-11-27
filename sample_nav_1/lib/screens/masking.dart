@@ -45,11 +45,6 @@ class MaskingScreen extends StatelessWidget {
             ),
             const Text(
                 "Dropdowns are Dialog Routes, so a new screen will start when the dropdown is opened."),
-
-            ///When the dropdown is opened it will be recorded, if you would
-            ///like to mask the options change enableAutomaticPopupRecording
-            ///to false
-
             DropdownButton(
               items: <String>[
                 'Option 1',
